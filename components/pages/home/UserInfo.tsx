@@ -25,7 +25,7 @@ const UserInfo: FC<UserInfoProps> = ({ user }) => {
           <span className="font-bold">Tên:</span> {user.name}
         </div>
         <div className="text-sm lg:text-xl text-slate-700">
-          <span className="font-bold">Ngề nghiệp:</span> {user.job}
+          <span className="font-bold">Công việc:</span> {user.job}
         </div>
         <div className="text-sm lg:text-xl text-slate-700">
           <span className="font-bold">Sở thích:</span> {user.hobbie}

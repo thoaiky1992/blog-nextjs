@@ -26,7 +26,7 @@ const RecentPost: FC<RecentPostProps> = ({ posts }) => {
           populate: "category",
           skip,
           limit: RECENT_POST_LIMIT,
-          sort: [["created_at", -1]],
+          sort: [["createdAt", -1]],
         })
         .getMany();
       if (data.length) {
