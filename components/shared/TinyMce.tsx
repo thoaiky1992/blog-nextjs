@@ -30,10 +30,10 @@ const TinyMceInstance: FC<TinyMceInstanceProps> = ({
 
   const TINYMCE_CONFIG: any = {
     height: "580px",
-    plugins: "tinydrive image link media emoticons table lists",
+    plugins: "tinydrive image link media emoticons table lists code",
     menubar: "file edit insert format tools table tc help",
     toolbar:
-      "language undo redo | bold italic underline strikethrough | fontselect fontsizeselect formatselect | alignleft aligncenter alignright alignjustify lineheight | bullist numlist outdent indent | forecolor backcolor | removeformat emoticons | media image",
+      "language undo redo | bold italic underline strikethrough | fontselect fontsizeselect formatselect | alignleft aligncenter alignright alignjustify lineheight | bullist numlist outdent indent | forecolor backcolor | removeformat emoticons | media image code",
     // content_css: 'document',
     content_style: "p, ol, ul { margin: 0; pading: 0 }",
     language: "vi",
