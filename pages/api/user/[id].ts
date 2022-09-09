@@ -29,18 +29,18 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
             resolve([fields, files]);
           });
         });
-        if (fields.image) {
+        if (fields.avatar) {
           const newFileName = new Date().getTime() + ".jpg";
           const newPath = "/images/user/";
           const dir = "./public" + newPath;
-          const file = fields.image;
+          const file = fields.avatar;
           const base64Data = file.replace(/^data:([A-Za-z-+/]+);base64,/, "");
 
           if (!fs.existsSync(dir)) {
             fs.mkdirSync(dir, { recursive: true });
           }
           fs.writeFileSync(dir + newFileName, base64Data, "base64");
-          fields.image = newPath + newFileName;
+          fields.avatar = newPath + newFileName;
         }
 
         const user = await User.findByIdAndUpdate(id, fields, { new: true });
