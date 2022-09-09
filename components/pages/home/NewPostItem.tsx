@@ -22,7 +22,7 @@ const NewPostItem: FC<NewPostItemProps> = ({
     <div className="row-span-3 w-full flex flex-col mb-10 lg:mb-0">
       <figure className="relative w-full pb-[60%] rounded-t-lg">
         <Image
-          src={String(post.image)}
+          src={`/api/proxy?filepath=${post.image}`}
           alt={post.description}
           layout="fill"
           objectFit="cover"
@@ -65,7 +65,7 @@ const NewPostItem: FC<NewPostItemProps> = ({
     >
       <figure className="basis-4/12 w-full relative rounded-lg mr-1">
         <Image
-          src={String(post.image)}
+          src={`/api/proxy?filepath=${post.image}`}
           alt={post.description}
           layout="fill"
           objectFit="cover"

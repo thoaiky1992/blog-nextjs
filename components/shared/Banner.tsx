@@ -44,7 +44,7 @@ const Banner: FC<BannerProps> = ({ posts }) => {
                 <div className="max-w-screen-xl w-full flex justify-center text-gray-500 h-[250px] md:h-[300px] lg:h-[400px]">
                   <div className="w-[40%] lg:flex-1 flex relative blur-[0.5px]">
                     <Image
-                      src={String(item.image)}
+                      src={`/api/proxy?filepath=${item.image}`}
                       alt={item.description}
                       layout="fill"
                       objectFit="cover"

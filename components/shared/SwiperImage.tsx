@@ -18,7 +18,7 @@ const SwiperImage = ({ imgSrc, index, key }: SwiperImageProps) => {
         priority={index === 0}
         alt="image-preview"
         layout="fill"
-        src={String(imgSrc)}
+        src={`/api/proxy?filepath=${imgSrc}`}
       />
     </div>
   );

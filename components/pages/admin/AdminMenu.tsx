@@ -24,7 +24,9 @@ const AdmiMenu = () => {
                 alt="user"
                 layout="fill"
                 objectFit="cover"
-                src={currentUser?.avatar || DEFAULT_AVATAR}
+                src={
+                  `/api/proxy?filepath=${currentUser?.avatar}` || DEFAULT_AVATAR
+                }
                 className="rounded-full"
               />
             </figure>

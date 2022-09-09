@@ -2,6 +2,7 @@ import Image from "next/image";
 import UserImage from "@/public/images/user.jpeg";
 import { UserEntity } from "@/entities/user.entity";
 import { FC } from "react";
+import { DEFAULT_AVATAR } from "@/constants";
 
 interface UserInfoProps {
   user: UserEntity;
@@ -12,7 +13,7 @@ const UserInfo: FC<UserInfoProps> = ({ user }) => {
       <div className="flex-1 w-full h-full">
         <div className="w-[300px] h-[300px] lg:h-[350px] lg:w-[350px] m-auto lg:m-0 lg:translate-x-[25%] rounded-full relative">
           <Image
-            src={UserImage}
+            src={`/api/proxy?filepath=${user.avatar}` || DEFAULT_AVATAR}
             alt={"Kysomaio"}
             layout="fill"
             objectFit="cover"

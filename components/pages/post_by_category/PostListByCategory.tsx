@@ -23,7 +23,7 @@ const PostListByCategory: FC<PostListByCategoryProps> = ({ posts }) => {
           >
             <figure className="w-28 h-28 lg:h-36 lg:w-36 relative mr-5">
               <Image
-                src={String(post.image)}
+                src={`/api/proxy?filepath=${post.image}`}
                 alt={post.description}
                 layout="fill"
                 objectFit="cover"

@@ -91,7 +91,7 @@ const PostList = () => {
                     alt={post.description}
                     layout="fill"
                     objectFit="cover"
-                    src={post.image}
+                    src={`/api/proxy?filepath=${post.image}`}
                     className="rounded-lg"
                   />
                 </figure>
