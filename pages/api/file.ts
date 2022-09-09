@@ -37,7 +37,11 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
       await fs.unlinkSync(file.filepath);
       return res
         .status(200)
-        .json({ message: "ok", path: newPath + newFileName });
+        .json({
+          message: "ok",
+          path: WEBSITE_URL + "/api/proxy?filepath=" + newPath + newFileName,
+        });
+
     default:
       return res.status(200).json({ message: "ok" });
   }
