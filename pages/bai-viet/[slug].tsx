@@ -21,7 +21,7 @@ const DetailPost: NextPageWithLayout<DetailPostProps> = ({ post }) => {
         description={post.description}
         image={WEBSITE_URL + post.image}
       />
-      <div className="w-full max-w-screen-lg m-auto py-10 flex">
+      <div className="w-full max-w-screen-lg m-auto py-10 flex overflow-x-hidden">
         <PostDetail post={post} />
       </div>
     </>
