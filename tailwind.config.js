@@ -20,9 +20,18 @@ module.exports = {
     animation: {
       "scale-image-banner": "scale-image-banner 300ms ease-in-out forwards",
       scale: "scale 300ms ease-in-out forwards",
+      opacity: "opacity 1s ease-in-out forwards",
       pulse: "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
     },
     keyframes: {
+      opacity: {
+        "0%": {
+          opacity: "0",
+        },
+        "100%": {
+          opacity: "1",
+        },
+      },
       "scale-image-banner": {
         "0%": {
           opacity: "0",

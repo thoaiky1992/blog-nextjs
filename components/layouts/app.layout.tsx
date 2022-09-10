@@ -12,7 +12,12 @@ const BlogLayout = ({ children }: AppLayoutProps) => {
   return (
     <>
       <Header />
-      <main className="w-full pt-[100px]">{children}</main>
+      <main
+        key={new Date().getTime()}
+        className="w-full pt-[100px] animate-opacity duration-300"
+      >
+        {children}
+      </main>
       <Footer />
     </>
   );
