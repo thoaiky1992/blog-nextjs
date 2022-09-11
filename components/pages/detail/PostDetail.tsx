@@ -20,7 +20,7 @@ const PostDetail: FC<PostDetailProps> = ({ post }) => {
   useEffect(() => {
     (async () => {
       const postService = PostService.getInstance();
-      await postService.updateOne(post._id, { views: post.views + 1 });
+      await postService.updateViews(post._id);
     })();
   }, []);
   return (

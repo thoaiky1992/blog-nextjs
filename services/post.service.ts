@@ -31,6 +31,11 @@ export class PostService {
     return result;
   }
 
+  async updateViews(id: string) {
+    const result = await axiosInstance.get(this.prefix + "/read/" + id);
+    return result;
+  }
+
   async getMany() {
     const params = { findOptions: JSON.stringify(this.query) };
     const { posts, count } = await (
