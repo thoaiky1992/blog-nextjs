@@ -3,6 +3,7 @@ import UserImage from "@/public/images/user.jpeg";
 import { UserEntity } from "@/entities/user.entity";
 import { FC } from "react";
 import { DEFAULT_AVATAR } from "@/constants";
+import Link from "next/link";
 
 interface UserInfoProps {
   user: UserEntity;
@@ -33,6 +34,17 @@ const UserInfo: FC<UserInfoProps> = ({ user }) => {
         </div>
         <div className="text-sm lg:text-xl text-slate-700">
           <span className="font-bold">Châm ngôn sống:</span> {user.maxime}
+        </div>
+        <div className="text-sm lg:text-xl text-slate-700">
+          <span className="font-bold">CV: </span>
+          <a
+            href={`https://cv.thoaiky.com`}
+            target="_blank"
+            rel="noreferrer"
+            className="underline hover:font-medium"
+          >
+            https://cv.thoaiky.com
+          </a>
         </div>
       </div>
     </div>
