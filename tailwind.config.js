@@ -7,6 +7,7 @@ module.exports = {
   theme: {
     fontFamily: {
       sans: "'Inconsolata', monospace",
+      detail: '"Times New Roman", Times, serif',
     },
     extend: {
       colors: {

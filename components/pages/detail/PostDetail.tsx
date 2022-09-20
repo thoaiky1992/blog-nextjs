@@ -33,8 +33,8 @@ const PostDetail: FC<PostDetailProps> = ({ post }) => {
           objectFit="cover"
         />
       </figure> */}
-      <div className="w-full px-3 lg:px-0">
-        <h1 className="mt-5 lg:mt-10 font-bold text-2xl lg:text-3xl cursor-pointer">
+      <div className="w-full px-5 lg:px-0">
+        <h1 className="mt-5 lg:mt-10 font-bold text-3xl lg:text-4xl cursor-pointer">
           {post.title}
         </h1>
         <h3 className="italic text-gray-400 text-base lg:text-lg">
@@ -54,7 +54,10 @@ const PostDetail: FC<PostDetailProps> = ({ post }) => {
         </div>
 
         <div className="w-full detail-content mt-10">
-          <div dangerouslySetInnerHTML={{ __html: post.body }} />
+          <div
+            className="font-detail text-base lg:text-lg"
+            dangerouslySetInnerHTML={{ __html: post.body }}
+          />
         </div>
         <FacebookComment dataHref={`${WEBSITE_URL}/bai-viet/${post.slug}`} />
       </div>
