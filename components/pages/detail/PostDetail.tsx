@@ -55,7 +55,7 @@ const PostDetail: FC<PostDetailProps> = ({ post }) => {
 
         <div className="w-full detail-content mt-10">
           <div
-            className="font-detail text-base lg:text-lg"
+            className="font-detail text-lg"
             dangerouslySetInnerHTML={{ __html: post.body }}
           />
         </div>
